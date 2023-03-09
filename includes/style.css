@@ -1,0 +1,536 @@
+:root {
+    --primary-color: #321c3d;
+    /* #000BB8; */
+    --secondary-color: #ee5927;
+    --text-color: #fffff1;
+    --black: #2f2f2f;
+    --white: #f2f2f2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Archivo';
+}
+
+/************** utility classes *************************/
+.danger {
+    border-radius: .4em;
+    margin-inline: auto;
+    width: 50%;
+    text-align: center;
+    background-color: red;
+    color: black;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.small {
+    font-size: .8em;
+}
+
+.success {
+    color: black;
+    font-size: 4em;
+}
+
+/*
+88                      88                                                         88
+""                      88                                       ,d                88
+                        88                                       88                88
+88 8b,dPPYba,   ,adPPYb,88  ,adPPYba, 8b,     ,d8    ,adPPYba, MM88MMM 8b       d8 88  ,adPPYba,
+88 88P'   `"8a a8"    `Y88 a8P_____88  `Y8, ,8P'     I8[    ""   88    `8b     d8' 88 a8P_____88
+88 88       88 8b       88 8PP"""""""    )888(        `"Y8ba,    88     `8b   d8'  88 8PP"""""""
+88 88       88 "8a,   ,d88 "8b,   ,aa  ,d8" "8b,     aa    ]8I   88,     `8b,d8'   88 "8b,   ,aa
+88 88       88  `"8bbdP"Y8  `"Ybbd8"' 8P'     `Y8    `"YbbdP"'   "Y888     Y88'    88  `"Ybbd8"'
+                                                                           d8'
+                                                                          d8'
+*/
+
+/********************************* main styling ******************************************/
+
+.main__wrapper {
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: .2fr 1.5fr 1.3fr;
+    color: var(--text-color);
+    position: relative;
+    background-color: var(--white);
+}
+
+.nav__wrapper {
+    grid-area: nav;
+    grid-column: span 12;
+    grid-row: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    box-shadow: 0 1px 1em .8em #0000000f;
+}
+
+.nav__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.nav__icon span {
+    font-family: 'Archivo';
+    font-weight: 500;
+}
+
+.nav__icon img {
+    margin-right: 1em;
+    height: 48px;
+    width: 48px;
+}
+
+
+.nav__title {
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.nav__links {
+    height: 100%;
+    width: 15vw;
+}
+
+.nav__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    list-style: none;
+
+
+}
+
+.list__item {
+    margin-top: 1em;
+    padding: .1em;
+}
+
+.list__item a {
+    text-decoration: none;
+    color: black;
+    font-size: 1.4em;
+}
+
+#login {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: .4em;
+    border-radius: .4em;
+}
+
+/********** info styling ******************/
+
+.info__wrapper {
+    height: 100%;
+    width: 100%;
+
+    grid-area: info;
+    grid-column: 1/ 10;
+    grid-row: 2 / span 2;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.info__img {
+    width: 50%;
+    height: 100%;
+}
+
+.info__img img {
+    width: 100%;
+    height: 100%;
+}
+
+.info__text {
+    text-align: center;
+    color: var(--black);
+}
+
+.text__title {
+    font-size: 2.4em;
+    font-weight: bolder;
+}
+
+.text__desc {
+    margin-top: 1em;
+    font-size: 1em;
+}
+
+/* ---------form styling---------- */
+.slide {
+    animation: slide 1s 1 ease;
+    animation-fill-mode: forwards;
+}
+
+.reverse-slide {
+    animation: reverse-slide 1s 1 ease;
+    animation-fill-mode: forwards;
+}
+
+.fade-in {
+    animation: fade-in .2s 1 ease;
+    animation-fill-mode: forwards;
+}
+
+.fade-out {
+    animation: fade-out .2s 1 ease;
+    animation-fill-mode: forwards;
+}
+
+.form__wrapper {
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    height: 100%;
+    width: 200%;
+    grid-column: 10 / 13;
+    grid-row: span 2;
+
+
+    background-color: #2f2f2f;
+
+    box-shadow: 1px 2em 2em -2em #0000005f;
+
+}
+
+.container__form {
+    position: relative;
+    height: 70%;
+    width: 100%;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+@keyframes slide {
+    from {
+        translate: (0);
+    }
+
+    to {
+        translate: -50%;
+    }
+}
+
+@keyframes reverse-slide {
+    from {
+        translate: -50%;
+    }
+
+    to {
+        translate: 0%;
+    }
+}
+
+.form__arrow {
+    position: absolute;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0%;
+    width: 100%;
+
+}
+
+.form__arrow a {
+    cursor: pointer;
+    pointer-events: auto;
+}
+
+
+#form-reg {
+    left: 50%;
+}
+
+#form-log {
+    left: 0%;
+}
+
+.form {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6em;
+
+    background-color: transparent;
+}
+
+.form__title {
+    font-size: 1.6em;
+
+}
+
+
+.form__username {
+    height: 2em;
+}
+
+.form__username input {
+    height: 100%;
+    border-radius: .4em;
+    outline: none;
+    border: none;
+}
+
+.form__password {
+    height: 2em;
+}
+
+.form__password input {
+    height: 100%;
+    border-radius: .4em;
+    outline: none;
+    border: none;
+}
+
+.form__captcha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.form__captcha input {
+    height: 100%;
+    width: 30%;
+    border-radius: .4em;
+    outline: none;
+    border: none;
+}
+
+.form__btn {
+    background-color: var(--secondary-color);
+    height: 2.4em;
+    width: 80%;
+    border: none;
+    outline: none;
+    border-radius: .4em;
+    color: #fff;
+}
+
+/********** Form Styling ****************/
+footer {
+    grid-column: span 12;
+    grid-row: 4 / -1;
+    background-color: black;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+
+    bottom: 0;
+    font-size: 0.8em;
+}
+
+footer a {
+    text-decoration: none;
+}
+
+
+/*
+88             88            88                                              88
+""             ""            ""                            ,d                88
+                                                           88                88
+88 8b,dPPYba,  88  ,adPPYba, 88  ,adPPYba,     ,adPPYba, MM88MMM 8b       d8 88  ,adPPYba,
+88 88P'   `"8a 88 a8"     "" 88 a8"     "8a    I8[    ""   88    `8b     d8' 88 a8P_____88
+88 88       88 88 8b         88 8b       d8     `"Y8ba,    88     `8b   d8'  88 8PP"""""""
+88 88       88 88 "8a,   ,aa 88 "8a,   ,a8"    aa    ]8I   88,     `8b,d8'   88 "8b,   ,aa
+88 88       88 88  `"Ybbd8"' 88  `"YbbdP"'     `"YbbdP"'   "Y888     Y88'    88  `"Ybbd8"'
+                                                                     d8'
+                                                                    d8'*/
+
+
+
+.nav__wrapper {
+    justify-content: space-around;
+}
+
+#usr-name {
+    color: black;
+}
+
+.side__menu {
+    grid-column: 1;
+    grid-row: 2 / 4;
+
+    padding: .1em;
+    background-color: var(--white);
+}
+
+.main__content {
+    grid-column: 2 / -1;
+    grid-row: span 2;
+    background-color: var(--black);
+
+}
+
+.menu__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+.top__buttons {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.top__buttons>.buttons>a {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.top__buttons>.buttons {
+    height: 25%;
+    width: 100%;
+}
+
+
+.bottom__buttons {
+    height: 20%;
+}
+
+.bottom__buttons>.buttons {
+    height: 100%;
+}
+
+
+
+.buttons {
+    color: black;
+    text-align: center;
+    padding: 1em;
+    height: 100%;
+    width: 100%;
+    /* border-bottom: 1px solid #2f2f2f; */
+
+    cursor: pointer;
+    /* box-shadow: 1px 10px 10px -10px #2f2f2f; */
+
+    /* border: 10px solid;
+    border-image-slice: 1;
+    border-width: 0 4px; */
+    /* border-image-source: linear-gradient(to top, var(--primary-color), #d53a9d); */
+}
+
+.buttons:hover {
+    background-color: #2f2f2f50;
+}
+
+.buttons>a {
+    text-decoration: none;
+    color: var(--black);
+    font-size: .8em;
+}
+
+
+
+/* table utility class */
+
+.head--30 {
+    width: 30%;
+}
+
+.head--40 {
+    width: 40%;
+}
+
+.head--10 {
+    width: 10%;
+}
+
+
+.content__saldo {
+    margin-inline: auto;
+    color: var(--white);
+    text-align: center;
+}
+
+.saldo-table__head th {
+    border-bottom: 2px solid black;
+    border-collapse: collapse;
+}
+
+.retirar__form,
+.depositar__form {
+    height: 100%;
+    width: 100%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    overflow: hidden;
+}
+
+.retirar__form :is(.form_int),
+.depositar__form :is(.form_int) {
+    height: 100%;
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.6em;
+}
+
+
+
+#saldo {
+    border-radius: .4em;
+    outline: none;
+    border: none;
+}

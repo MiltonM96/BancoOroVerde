@@ -1,0 +1,36 @@
+Integrantes del grupo 3 :
+- Milton Martin
+- Javier Raby
+- Anton Romero
+
+Deberán realizar un trabajo práctico para profundizar los conocimientos adquiridos en la teoría y con ellos también poder resolver problemas reales en sistemas y equipos preparados para tal propósito.
+
+La segunda entrega implica la implementación de captcha y session al formulario de login realizado en la primer entrega.
+
+Se deberá implementar:
+
+-> Captcha con su respectiva validación al formulario de login.
+
+-> Utilización de sesiones y verificación.
+
+-> Redirección luego de un correcto login  a una página inicio.php la cual deberá mostrar una bienvenida a nuestro sitio.
+
+-> En caso de que el login no sea correcto, informarlo y volver al Form inicial.
+
+-> El proceso de login deberá contemplar que el usuario ingrese correctamente el valor del captcha.
+
+
+
+Una vez realizada la autenticación se deberá:
+
+-> Crear una session y almacenar el nombre del usuario en la misma.
+
+-> Redireccionar la navegacion a un script inicio.php el cual deberá tener incluidos el header y footer. El header deberá mostrar la leyenda "Logueado como: <<nombreDelUsuario>>.
+
+-> Solamente podremos acceder al script inicio.php si está creada la session (si el usuario se ha logueado correctamente). De no ser así se deberá redirigir la navegacion al formulario de login.
+
+
+
+Adjuntar un comprimido en el formato que desee, conteniendo todo el código fuente funcional y un archivo con el nombre del grupo y los integrantes.
+
+El TP se evalua con una nota de 0 a 100, dependiendo del cumplimiento del requimiento del TP, contemplando los detalles en su desarrollo.
